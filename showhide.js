@@ -17,9 +17,16 @@ function getRandomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 // This function gets called if player hits a target
-function clickedTarget() {
+function clickedTarget(e) {
+    console.log(e.target);
+    console.log(e.target.querySelector("img"));
+    if (e.target.querySelector("img").style.display != null) {
+        e.target.querySelector("img").style.display = 'block';
+    }
+    console.log("Got a Hit!");
     // Right now, just updates a count.
     // Could use some player feedback here
+
     hits += 1;
 }
 // The main function that sets up targets and starts a game
@@ -32,8 +39,8 @@ function setUpTargetsAndPlay(numberOfTargets, displayTimeMs) {
     $("table").on("click", function () {
 
         clicks += 1;
-        console.log("clicked. Max = " + clicks);
-        if (clicks === targets) {
+        console.log("clicked = " + clicks + " Max = " + targets);
+        if (clicks == targets) {
             alert("No more clicks! You got " + hits + " out of " + targets);
             // Turn off click detection
             $("td").off("click");
@@ -53,9 +60,6 @@ function setUpTargetsAndPlay(numberOfTargets, displayTimeMs) {
         $('#' + tdID).on("click", clickedTarget).append("<img id = " + imgID + " class= 'targetImg' src='bird.png'>");
         $(`#${imgID}`).delay(2000).show(0);
         $(`#${imgID}`).delay(displayTimeMs).hide(0);
-        $('#' + imgID).on('click', function(e) {
-            e.target.removeAttribute("hidden");
-        })
     }
 
 };
