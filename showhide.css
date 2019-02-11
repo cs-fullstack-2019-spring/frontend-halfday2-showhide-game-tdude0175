@@ -6,6 +6,18 @@ table {
 
 /* Set each td size */
 td {
-    width: 100px;
+    width: 300px;
     height: 100px;
+}
+/*added to make images appear easier to see and clicks are easier to register for the table*/
+.targetImg
+{
+    width: 100%;
+    height: 100%;
+}
+
+/*makes clickCounter look better*/
+.clickCounter
+{
+    font-weight: bold;
 }

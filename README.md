@@ -25,5 +25,14 @@ Some Ideas:
 
 ### I IMPLEMENTED THE FOLLOWING NEW FEATURE(S):
 
+added else statement to prevent winning by clicking the same image.
+Removed show delay since not working, could turn into setInterval.
+added a ClickCounter to the bottom for keeping track of tries.
+reworked timer so you input seconds rather then ms.
+reworked random numbers so you cannot get an image in the same cell.
+changed image size so it fits the cell making it easier to figure out which one to click.
+fixed it so you cannot click an image before it hides
+
+
 
 
