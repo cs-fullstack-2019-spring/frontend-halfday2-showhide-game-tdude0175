@@ -1,3 +1,7 @@
+### POINTS: 1.5
+### KEY: I gave you the benefit of the doubt because I know u worked your a$$ off and even fixed some issues, but your final version doesn't work.
+### No matter how well you hit targets, you don't score.
+
 # JavaScript Show/Hide Game
 
 Take this simple show/hide game and make it your own.
